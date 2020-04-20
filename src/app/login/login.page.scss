@@ -1,0 +1,146 @@
+page-home{
+    ionic-content{
+
+    //   background-image: url(images/1696.jpg);
+
+    }
+
+
+}
+
+ion-content.main{
+
+        background-color: white;
+   // --background: url(images/Sweets_Lollipop_Candy_Marmalade_Colored_background_555251_3000x2000.jpg) 0 0/100% 100% no-repeat;
+}
+
+
+
+.mobile{
+    display: none;
+}
+.portrait{
+   // background-color: rgb(253, 253, 253);
+    top: 50%;
+    border-radius: 30px;
+    height: 60%;
+}
+
+.shadow-red{
+    box-shadow: 0px 14px 25px rgba(187, 187, 187, 0.59);
+    //border-radius: 5px;
+    --border-radius: 5px;
+}
+
+ion-button{
+    height: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    
+}
+
+
+ion-item{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: transparent !important;
+    --ion-item-background: transparent !important;
+    align-items: center;
+    --ion-item-lines:none;
+    color: black;
+}
+
+ion-item-divider{
+    --ion-item-background: transparent !important;
+}
+
+ion-input{
+    background-color: transparent !important;
+}
+
+
+
+$small: 600px;
+$medium: 900px;
+
+
+  @media screen and (max-width: $small) {
+    //do Smth
+    .dulce{
+   
+        display: block;
+        width: 100%;
+        height: 90px;
+        position: absolute;
+     //   background: url(images/ori.png) 0 0/100% 100% no-repeat;
+        top:80%;
+      /*  animation-name: est;
+        animation-delay: 2s;
+        animation-duration: 3s;
+        animation-iteration-count: 1;*/
+        
+    }
+
+    .mobile{
+        display: block;
+    }
+    .desktop{
+        display: none;
+    }
+
+/*
+@-webkit-keyframes est {
+
+	0%{
+        background: url(images/ori.png) 0 0/100% 100% no-repeat;
+
+    }
+    10%{
+        background: url(images/D.png) 0 0/100% 100% no-repeat;
+
+    }
+	20%{
+        background: url(images/Du.png) 0 0/100% 100% no-repeat;
+
+	   }
+	30%{
+        background: url(images/Dul.png) 0 0/100% 100% no-repeat;
+
+    }
+    40%{
+        background: url(images/Dulc.png) 0 0/100% 100% no-repeat;
+
+    }
+    50%{
+        background: url(images/Dulce.png) 0 0/100% 100% no-repeat;
+
+    }
+    60%{
+        background: url(images/Dulcem.png) 0 0/100% 100% no-repeat;
+
+    }
+	70%{
+        background: url(images/Dulcema.png) 0 0/100% 100% no-repeat;
+
+       }
+    80%{
+        background: url(images/Dulceman.png) 0 0/100% 100% no-repeat;
+
+    }
+    90%{
+        background: url(images/Dulcemani.png) 0 0/100% 100% no-repeat;
+
+    }
+	   100%{
+        background: url(images/Dulcemania.png) 0 0/100% 100% no-repeat;
+	   }
+
+}
+
+*/
+  }
+  @media screen and (min-width: $medium) {
+      //do Smth
+  }
+
+

@@ -1,0 +1,123 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>House Hotel</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="main">
+
+<div class="img"> 
+    <ion-grid>
+      <ion-row>
+          <ion-col size="2"></ion-col>
+          <ion-col><img src="../assets/images/house.png"></ion-col>
+          <ion-col size="2"></ion-col>
+
+      </ion-row>
+
+    </ion-grid>
+    
+</div>
+
+<div class="desktop" style="position: absolute; top: 30%; width: 100%;">
+<ion-grid>
+  <ion-row>
+    <ion-col size="3"></ion-col>
+    <ion-col size="6">
+
+      <div class="portrait">
+        <ion-item style="background-color: transparent !important;" class="email">
+            <ion-label position="floating">
+              Email:
+            </ion-label>
+            <ion-input  [(ngModel)]='email' type="email" [(ngModel)]="user.email" style="background-color: transparent;"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">
+            Password:
+          </ion-label>
+          <ion-input  [(ngModel)]='password' type="password" [(ngModel)]="user.password"></ion-input>
+      </ion-item >
+        <ion-item>
+          <div style="width: 100%;">
+              <ion-grid>
+                <ion-row class="ion-align-items-center">
+                  <ion-col size="4"> <ion-button size="large" (click)="onLogin()">Ingresar</ion-button></ion-col>
+                  <ion-col size="4">
+                  
+                  </ion-col >
+                  <ion-col size="4">   <ion-button size="large"  routerLink="/add-customer">Registrate</ion-button></ion-col>
+                </ion-row>
+              </ion-grid>
+          </div>
+
+        </ion-item>
+         
+  
+      </div>
+
+    </ion-col>
+    <ion-col size="3"></ion-col>
+  </ion-row>
+
+</ion-grid>
+</div>
+
+
+<div class="mobile" style="position: absolute; top: 30%; width: 100%;">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="1"></ion-col>
+      <ion-col size="10">
+  
+        <div class="portrait">
+        
+          
+          <ion-item>
+              <ion-label position="floating" style="color: black; font-weight: bold;">
+                Email:
+              </ion-label>
+              <ion-input  type="email" #correo style="background-color: transparent;"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating" style="color: black; font-weight: bold;">
+              Password:
+            </ion-label>
+            <ion-input  type="password" #pass></ion-input>
+        </ion-item >
+        
+        </div>
+        <ion-item lines="none">
+          <div style="width: 100%;">
+              <ion-grid>
+                <ion-row class="ion-align-items-center">
+                  <ion-col size="12"> <ion-button expand="block" (click)="onLogin(correo.value,pass.value)" class="shadow-red" shape="round" style="font-size: 19px;">Ingresar</ion-button></ion-col>
+               
+                </ion-row>
+              </ion-grid>
+          </div>
+
+        </ion-item>
+        <ion-item lines="none">
+          <div style="width: 100%;">
+              <ion-grid>
+                <ion-row class="ion-align-items-center">
+                  <ion-col size="12">   <ion-button expand="full"  routerLink="/add-customer">Registrate</ion-button></ion-col>
+               
+                </ion-row>
+              </ion-grid>
+          </div>
+
+        </ion-item>
+
+
+      </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+  
+  </ion-grid>
+</div>
+
+<div class="dulce" position="bottom">
+</div>
+</ion-content>

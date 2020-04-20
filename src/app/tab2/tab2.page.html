@@ -1,0 +1,78 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Explorar
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Start Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+ 
+  <div>    
+    <ion-list class="ios list-ios hydrated" style="background-color: transparent;">
+      <ion-list-header class="ios hydrated" style="color: #000000;" >
+        Habitaciones
+      </ion-list-header>
+
+      <ion-item *ngFor="let habitacion2 of habitaciones let i = index" class="item-label item ios in-list ion-focusable hydrated" >
+        <ion-card class="carta" style="background-color: white !important;">
+          <ion-item style="color: black;">
+            <ion-avatar slot="start">
+              <img src="{{habitaciones[i]['fin'][0]['image_profile']}}">
+            </ion-avatar>
+            <ion-label style="color: black;">
+              <h3>{{habitaciones[i]['fin'][0]['FirstName']}} {{habitaciones[i]['fin'][0]['LastName']}}</h3>
+              <p style="color: black;">{{habitaciones[i]['date']}}</p>
+            </ion-label>
+          </ion-item>
+          <div  (click)="select(habitacion2,i)" routerLink="/info-hab">
+          <img src="{{habitaciones[i]['picture_url']}}" alt="ion" width="100%" height="150">
+          <ion-card-header>
+            <ion-card-title style="font-size: 12px; color: black;">{{habitaciones[i]['name']}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content style="color: black;">
+              {{habitaciones[i]['summary']|limitador:100}}
+          </ion-card-content>
+          </div>
+          <ion-footer>
+            <ion-row class="ion-align-items-center">
+              <ion-col center text-center size="6">
+                      <form [formGroup]="CustomerForm" (ngSubmit)="onFormSubmit()">
+                          <button type="submit" style="width: 100%; background-color: transparent; border-top: 1px solid #000000;" (click)="like(i)">
+                            <ion-icon name="thumbs-up"></ion-icon>
+                            <div>{{habitaciones[i]['likes']}} Like(s)</div>
+                      </button >
+                    </form>
+              </ion-col>
+              <ion-col center text-center size="6">
+                <button style="width: 100%; background-color: transparent; border-top: 1px solid #000000;">
+                  <ion-icon name="text"></ion-icon>
+                  <div>4 Comments</div>
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-footer>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+  </div>
+
+ 
+</ion-content>
+

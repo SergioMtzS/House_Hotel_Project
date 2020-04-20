@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Detalles</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs" style="color: white;"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="main">
+      <div style="width: 100%; height: 205px; border: solid 2px #ff780a ;">
+          <img [src]="this.API.image" height="200" width="100%">
+      </div>
+      <div  class="info">
+        <ion-grid style="margin:0px;padding-left: 20px;;text-align: center;" >
+              <ion-row style="margin:0px;padding: 0px;text-align: center;">
+                  <ion-col style="margin:0px;padding: 0px;text-align: center;"> 
+                        <div class="sho">
+                              <ion-grid>
+                                  <ion-row style="border-bottom: solid 1px;">
+                                      <ion-col style="font-size: 20px; color: #F1C40F;"><ion-icon name="star"></ion-icon></ion-col>
+                                  </ion-row>
+                                  <ion-row>
+                                      <ion-col>4.5</ion-col>
+                                  </ion-row>
+                              </ion-grid>
+                        </div>
+                </ion-col>
+                  <ion-col style="margin:0px;padding: 0px;text-align: center;"> 
+                    <div class="sho">
+                        <ion-grid>
+                          <ion-row>
+                              <ion-col style="font-size: 40px;"><ion-icon name="mail"></ion-icon></ion-col>
+                          </ion-row>
+                      </ion-grid>
+                    </div>
+                </ion-col>
+                  <ion-col style="margin:0px;padding: 0px;text-align: center;">
+                    <div class="sho">
+                      <ion-grid>
+                        <ion-row>
+                            <ion-col style="font-size: 40px; color: #253FFF;"><ion-icon name="call"></ion-icon></ion-col>
+                        </ion-row>
+                    </ion-grid>
+            
+                  </div></ion-col>
+              </ion-row>
+        </ion-grid>
+            
+      </div>
+
+      <div style="height: 90px;display: block; background-color: #91CFCD; margin-top: 20px; border-bottom: 2px solid #000000;">
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="9">
+                <ion-grid>
+                  <ion-row>
+                    <ion-col size="12" style="padding: 0px; border-bottom: 1px solid #000000; color: black; font-family: 'Times New Roman', Times, serif; font-weight: bold;">Propietario: {{this.API.userN}} {{this.API.userA}}</ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col size="12" style="margin-top: 10px; color: #000000;">
+                      Correo: {{this.API.correo}}<br>
+                      Telefono: {{this.API.telefono}}
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+            </ion-col>
+            <ion-col size="3" style="height: 80px; border: 2px solid #000000  ;"><img [src]="this.API.userI" height="75" width="100"></ion-col>
+          </ion-row>
+        </ion-grid>
+
+      </div>
+      <div>
+
+
+      </div>
+
+      <div class="desc" >
+          <ion-grid>
+              <ion-row>
+                  <ion-col ><p  style="color: black; font-size: 20px; margin-left: 10px;">Descripcion</p> </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+
+                  
+                </ion-col>
+
+            </ion-row>
+
+          </ion-grid>
+
+
+      </div>
+
+      <div class="summ">
+        <div class="summary" style="border: 1px solid #ff780a; border-radius: 5px; padding: 5px;"> {{this.API.descripcion}}</div>
+
+      </div>
+     
+
+
+
+</ion-content>

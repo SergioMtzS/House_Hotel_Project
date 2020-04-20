@@ -1,0 +1,25 @@
+
+ion-tabs{
+    --ion-tabs-background:red !important;
+    --ion-tabbar-background-color:blue;
+    --ion-tabs-background-color:var(--ion-tabbar-background-color, #ffffff);
+}
+
+.tab{
+     background-color: red !important;
+}
+
+.tabs-md .tabbar,.tabs-ios .tabbar{
+
+    background: linear-gradient(rgb(3, 132, 218) ,rgb(2, 3, 46));
+}
+
+ion-tab-button{
+    background-color: #ff8838 !important;
+    color: white;
+}
+
+.tab-selected{
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(245,138,66,1) 9%, rgba(255,136,56,1) 92%, rgba(254,254,254,1) 100%);
+}

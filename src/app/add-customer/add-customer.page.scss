@@ -1,0 +1,15 @@
+ion-content.main{
+
+    background-color: white;
+    --ion-item-background: transparent;
+    --ion-text-color: black;
+// --background: url(images/Sweets_Lollipop_Candy_Marmalade_Colored_background_555251_3000x2000.jpg) 0 0/100% 100% no-repeat;
+}
+
+ion-item{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: transparent !important;
+    --ion-item-background: transparent !important;
+    align-items: center;
+}

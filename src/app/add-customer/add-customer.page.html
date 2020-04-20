@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar class="ios hydrated">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="login" style="color: white;"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ios title-ios hydrated">Registrate</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="main">
+  <ion-list lines="full" class="ion-no-margin ion-no-padding ios list-ios list-lines-full list-ios-lines-full hydrated">
+    <form [formGroup]="CustomerForm" (ngSubmit)="onFormSubmit()">
+      <ion-item>
+        <ion-label position="floating" >Nombre</ion-label>
+        <ion-input formControlName="FirstName"  type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating" >Apellido</ion-label>
+        <ion-input formControlName="LastName"   type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating"  >Correo</ion-label>
+        <ion-input formControlName="Correo"  type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating"  >Contraseña</ion-label>
+        <ion-input formControlName="pass"  type="password" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating"  >Calle</ion-label>
+        <ion-input formControlName="Address"  type="text" required></ion-input>
+      </ion-item> 
+      <ion-item>
+      
+        <ion-label position="floating">Telefono</ion-label>
+        <ion-input formControlName="Telefono"  type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Metodo de Pago</ion-label>
+        <ion-select placeholder="Selecciona un metodo" formControlName="Metodo" >
+          <ion-select-option value=1>Acordar con el alquilador</ion-select-option>
+          <ion-select-option value=2>Tarjeta Visa</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Ciudad</ion-label>
+        <ion-input formControlName="City" type="text">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Pais</ion-label>
+        <ion-input formControlName="Country" type="text" required >
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Foto perfil</ion-label>
+        
+      </ion-item>
+      <ion-item>
+        <input type="file" accept=".png, .jpg" (change)="uploadFile($event)">
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="primary" shape="full" expand="block">Add Customer</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+
+</ion-content>
